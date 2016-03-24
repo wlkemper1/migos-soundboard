@@ -1,0 +1,128 @@
+
+body {
+	background-image: url("../images/bgpattern.jpg");
+	background-size: 40px;
+}
+
+.mobilerows {
+	visibility:hidden;
+}
+
+
+.allrows {
+	overflow-x: scroll;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    display: block;
+	white-space: nowrap;
+}
+
+
+.row {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow: auto;
+}
+
+#row1 {
+	padding-left: 10px;
+}
+
+#row2 {
+	padding-left: 20px;
+}
+
+#row3 {
+	padding-left: 30px;
+}
+
+.migobutton {
+	width: 80px;
+	height: 80px;
+	background: white;
+	border: 3px solid black;
+	border-radius: 5px;
+	margin: auto;
+	margin-right: 10px;
+	float: left;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+
+
+.migobutton:hover, .migobutton.on {
+  box-shadow: 2px 5px 7px rgba(0,0,0,0.75);
+  transform: scale(1.05, 1.05);
+}
+
+.migopic {
+	width: 80px;
+	height: 80px;
+}
+
+/*
+//////////
+////////////////////
+//////////////////////////////
+//////////MOBILE SCREEN//////////
+//////////////////////////////
+////////////////////
+//////////
+*/
+
+@media(max-width: 914px) {
+
+	.allrows {
+		visibility: hidden;
+	}
+
+body {
+	overflow: auto;
+}
+
+	.mobilerows {
+		height: 100%;
+		visibility: visible;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin-right: -50%;
+	    transform: translate(-50%, -50%);
+	}
+
+	.mobilerow {
+		overflow: hidden;
+	}
+
+
+	.migobutton {
+		margin: 7px 10px;
+	}
+
+	.migobutton, .migopic {
+		width: 80px;
+		height: 80px;
+	}
+
+	#mobilerow3, #mobilerow6 {
+		margin-bottom: 40px;
+	}
+
+	#mobilerow1 {
+		margin-top: 40px;
+	}
+
+	#mobilerow9 {
+		margin-bottom: 40px;
+	}
+
+
+
+}
+
